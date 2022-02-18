@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Book(models.Model):
     title = models.CharField(blank=False, unique=True, max_length=36)
@@ -8,3 +9,6 @@ class Book(models.Model):
     published = models.DateField(blank=True, null=True, default=None)
     is_published = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='covers/', blank=True)
+
+    def __str__(self):
+        return self.title
