@@ -18,7 +18,7 @@ class BookViewSet(viewsets.ModelViewSet):
 # class Another(View):
     # books = Book.objects.all()
     # books = Book.objects.filter(is_published=True)
-    books = Book.objects.get(id=2) # gets one record only
+    # books = Book.objects.get(id=2) # gets one record only
     # output = ''
     # for book in books:
     #     output += f"we have {book.title} with ID {book.id} in db<br>"
