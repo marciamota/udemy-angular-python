@@ -1,3 +1,7 @@
+/venv
 .env
+MovieRaterApi/venv/
+first-app/venv/
 /venv/
+/.env
 .idea
