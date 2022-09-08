@@ -1,0 +1,13 @@
+<div>
+  <h1 *ngIf="counter>2">welcome {{name}}</h1>
+  <h1 *ngIf="counter<=2">increase counter</h1>
+  <p [ngStyle]="{'background-color': mycolor}">{{counter}}</p>
+  <input type="text" [(ngModel)]="name"/>
+  <button (click)="btnClick()">Click me</button>
+  <div *ngFor="let person of people">
+    <!-- <h3 *ngIf="person.age>18"> -->
+    <h3>
+      {{person.name}} is {{person.age}} old
+    </h3>
+  </div>
+</div>
