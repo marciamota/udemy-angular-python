@@ -5,3 +5,4 @@ first-app/venv/
 /venv/
 /.env
 .idea
+angular-intro/node_modules/
