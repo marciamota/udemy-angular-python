@@ -1,13 +1,22 @@
 <div>
-  <h1 *ngIf="counter>2">welcome {{name}}</h1>
-  <h1 *ngIf="counter<=2">increase counter</h1>
-  <p [ngStyle]="{'background-color': mycolor}">{{counter}}</p>
-  <input type="text" [(ngModel)]="name"/>
-  <button (click)="btnClick()">Click me</button>
-  <div *ngFor="let person of people">
-    <!-- <h3 *ngIf="person.age>18"> -->
-    <h3>
-      {{person.name}} is {{person.age}} old
-    </h3>
-  </div>
+  <h1>welcome {{name | uppercase}}</h1>
+
+  <nav>
+    <a routerLink="first">First</a><br />
+    <a routerLink="second/5">Second</a>
+  </nav>
 </div>
+<router-outlet></router-outlet>
+
+<h1 *ngIf="counter>2">welcome {{name | uppercase}}</h1>
+<h1 *ngIf="counter<=2">increase counter</h1>
+<p [ngStyle]="{'background-color': mycolor}">{{counter}}</p>
+<input type="text" [(ngModel)]="name" />
+<button (click)="btnClick()">Click me</button>
+<div *ngFor="let person of people">
+  <h3 [ngClass]="{'red': person.age>24}">
+    {{person.name | uppercase}} is {{person.age}} old
+  </h3>
+</div>
+<h3>{{today | date:"dd/MM/yyyy"}}</h3>
+<h2>{{cash | currency:"EUR"}}</h2>
